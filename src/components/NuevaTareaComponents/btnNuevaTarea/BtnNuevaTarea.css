@@ -1,0 +1,21 @@
+.btnNuevaTareaContainer{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #242424;
+}
+
+.btnNuevaTareaIcon{
+    width: 20%;
+    height: 60px;
+    border-radius: 7px;
+    border: 2px solid rgba(255, 255, 255, 0.637);
+    padding: 0 10px;
+    background-color: transparent;
+    margin-top: 10px;
+    cursor: pointer;
+    color: aliceblue;
+}
+

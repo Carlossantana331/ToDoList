@@ -1,0 +1,153 @@
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #111111d2;
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    --transform: translateY(-100vh);
+    --transition: transform 0.5s ease;
+    z-index: 2;
+}
+
+.modalShow{
+    opacity: 1;
+    pointer-events: auto;
+    --transform: translateY(0);
+}
+
+.modalContainer{
+    width: 90%;
+    max-width: 600px;
+    max-height: 90%;
+    background-color: white;
+    margin: auto;
+    border-radius: 7px;
+    border: 2px solid rgba(3, 5, 167, 0.822);
+    padding: 3em 2.5em;
+    display: grid;
+    place-items: center;
+    transform: var(--transform);
+    transition: 0.3s ease;
+    transition: var(--transition);
+}
+
+.btnCerrarVentana{ 
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: red;
+    color: aliceblue;
+    border: none;
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.formModal{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.formTarea{
+    display: flex;
+    justify-content: space-between;
+}
+
+.label{
+    font-size: 24px;
+}
+
+.formTarea input{
+    width: 100%;
+    height: 36px;
+    border-radius: 7px;
+    border: 2px solid rgba(0, 0, 0, 0.822);
+    padding: 0 10px;
+}
+
+.btnCrearCat{
+    width: 100px;
+    border-radius: 7px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.formNuevaCat{
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+
+
+.btnNuevaTarea{
+    width: 50%;
+    height: 36px;
+    border-radius: 7px;
+    border: 2px solid rgba(0, 0, 0, 0.822);
+    padding: 0 10px;
+    background-color: transparent;
+    margin-top: 10px;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.css-13cymwt-control, .css-t3ipsp-control, .css-t3ipsp-control{
+    border-radius: 7px;
+    padding: 0 10px;
+    font-size: 16px;
+    min-height: 20px;
+}
+
+.css-b62m3t-container .css-13cymwt-control, .css-b62m3t-container .css-t3ipsp-control{
+    border: 2px solid rgba(0, 0, 0, 0.822);
+}
+
+.css-b62m3t-container .css-13cymwt-control:hover{
+    border: 2px solid rgba(0, 0, 0, 0.822);
+}
+
+.css-hlgwow .css-1jqq78o-placeholder{
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.822);
+}
+
+.css-1xc3v61-indicatorContainer .css-tj5bde-Svg{
+    fill: rgba(0, 0, 0, 0.822);
+}
+.css-1nmdiq5-menu{
+    width: 300%;
+}
+
+.css-9x5mqu{
+    font-size: 18px;
+}
+
+.css-1nmdiq5-menu{
+    font-size: 16px;
+}

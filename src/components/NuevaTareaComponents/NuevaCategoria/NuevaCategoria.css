@@ -1,0 +1,90 @@
+/* Estilo base para la transición */
+.visible,
+.oculto {
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  opacity: 1;
+  transform: translateY(0); /* Posición original */
+}
+
+/* Estilo para ocultar el componente */
+.oculto {
+  opacity: 0;
+  transform: translateY(-20px); /* Subir ligeramente el componente */
+  pointer-events: none; /* Desactivar eventos mientras está oculto */
+}
+
+/* Estilo para mostrar el componente */
+.visible {
+  opacity: 1;
+  transform: translateY(0); /* Posición original */
+  pointer-events: auto; /* Permitir eventos */
+}
+
+.visible,
+.oculto {
+  font-size: 18px;
+}
+
+.inputNuevaCat {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.catInput {
+  width: 48%;
+  height: 30px;
+  margin-left: 9px;
+  border-radius: 5px;
+  padding-left: 5px;
+  font-family: 'Quicksand', sans-serif;;
+}
+
+.catName {
+  width: 100%;
+}
+
+.catColor {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+.colorInput {
+  inline-size: 40px;
+  block-size: 25px;
+  cursor: pointer;
+  box-sizing: border-box;
+  background-color: transparent;
+  color: buttontext;
+  border-width: 0px;
+  border-style: none;
+  border-color: transparent;
+  border-image: initial;
+  padding: 1px;
+}
+
+.colorInput::-webkit-color-swatch {
+  border-radius: 7px; /* aplica el radio dentro del color swatch */
+}
+
+.botonesNuevaCat {
+  display: flex;
+  gap: 20px;
+  margin-top: 10px;
+}
+.addCatBtn,
+.cerrarCatBtn {
+  background-color: transparent;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 7px;
+}
+
+.cerrarCatBtn{
+  background-color: red;
+  color: aliceblue;
+  font-weight: bold;
+}
+
+
+/*   background-color: #242424; */

@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Teachers:ital,wght@0,400..800;1,400..800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+label,
+button {
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400; /* Puedes ajustar el peso según lo que necesites */
+  font-style: normal; /* O italic si lo prefieres */
+}
+
+button {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+button:active {
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.5);    /* Pequeña reducción de tamaño para el efecto de "presionado" */
+  }
