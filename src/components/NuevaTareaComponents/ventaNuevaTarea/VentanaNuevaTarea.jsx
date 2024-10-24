@@ -4,7 +4,7 @@ import { TareasContext } from "../../../context/TareasContext";
 import { ColorContext } from "../../../context/ColorContext";
 import Select from "react-select";
 import { RiCloseLargeFill } from "react-icons/ri";
-import "./ventanaNuevaTarea.css";
+import "./VentanaNuevaTarea.css";
 
 function VentanaNuevaTarea({ handleBtnNuevaTarea, Name }) {
   const [tarea, setTarea] = useState("");
