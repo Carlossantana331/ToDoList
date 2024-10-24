@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import VentanaNuevaTarea from '../ventaNuevaTarea/VentanaNuevaTarea';
-import './btnNuevaTarea.css';
+import './BtnNuevaTarea.css';
 
 function BtnNuevaTarea() {
 
