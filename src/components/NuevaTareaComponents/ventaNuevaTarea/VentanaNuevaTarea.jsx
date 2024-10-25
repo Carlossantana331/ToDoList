@@ -83,6 +83,10 @@ function VentanaNuevaTarea({ handleBtnNuevaTarea, Name }) {
     setCategoria(selectedOption.value); // Seleccionar todo el objeto de la categoría
   };
 
+  // Obtener la fecha actual en formato YYYY-MM-DD
+  const hoy = new Date();
+  const fechaActual = hoy.toISOString().split('T')[0];
+
   return (
     <div className={Name}>
       <div className="modalContainer">
@@ -94,7 +98,7 @@ function VentanaNuevaTarea({ handleBtnNuevaTarea, Name }) {
             </label>
             <label className="label">
               Fecha:
-              <input type="date" value={fecha} onChange={handleFecha} />
+              <input type="date" value={fecha} onChange={handleFecha} min={fechaActual}/>
             </label>
           </section>
 
