@@ -109,7 +109,7 @@ function ListaTareasCard() {
 
                   <div className="cardItemText">
                     <div>{tarea.tarea}</div>
-                    <div>{tarea.fecha}</div>
+                    <div>{tarea.fechaFormateada}</div>
                   </div>
                 </div>
                 <button onClick={() => handleDelete(index, i)} className="deleteTaskBtn">

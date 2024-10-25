@@ -12,16 +12,16 @@ export function CardProvider ({children}) {
 
         const tareasAgrupadas = {}
 
-        tareas.forEach(({tarea, fecha, categoria}) => {
+        tareas.forEach(({tarea, fechaFormateada, categoria}) => {
             const claveCategoria = `${categoria.nombre}-${categoria.color}`
 
             if (tareasAgrupadas[claveCategoria]) {
-                tareasAgrupadas[claveCategoria].tareas.push ({tarea, fecha})
+                tareasAgrupadas[claveCategoria].tareas.push ({tarea, fechaFormateada})
             } else {
                 tareasAgrupadas[claveCategoria] = {
                     nombre: categoria.nombre, 
                     color: categoria.color,
-                    tareas: [{tarea, fecha}]
+                    tareas: [{tarea, fechaFormateada}]
                 }
             }
 

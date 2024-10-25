@@ -37,13 +37,20 @@ function VentanaNuevaTarea({ handleBtnNuevaTarea, Name }) {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    const fechaObj = new Date(fecha);
+    const dia = String(fechaObj.getDate()).padStart(2, "0");
+    const mes = String(fechaObj.getMonth() + 1).padStart(2, "0");
+    const anio = fechaObj.getFullYear();
+    const fechaFormateada = `${dia}/${mes}/${anio}`;
+
     // Crear nueva tarea con la categoría seleccionada
     const nuevaTarea = {
       tarea,
-      fecha,
+      fechaFormateada,
       categoria, // Aquí se guarda la categoría como un objeto {nombre, color}
       checked:false
     };
+
 
     // Actualizar tareas en el contexto
     setTareas([...tareas, nuevaTarea]);
