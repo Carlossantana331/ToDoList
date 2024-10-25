@@ -169,7 +169,7 @@ h2 {
         font-size: 16px;
     }
     .cardItemContent::before{
-        width: 330px;
+        width: 75vw;
     }
     .cardItemText{
         font-weight: 900;
