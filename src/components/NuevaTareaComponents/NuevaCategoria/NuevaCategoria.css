@@ -1,25 +1,13 @@
-/* Estilo base para la transición */
-.visible,
-.oculto {
-  transition: opacity 0.5s ease, transform 0.5s ease;
-  opacity: 1;
-  transform: translateY(0); /* Posición original */
-}
 
-/* Estilo para ocultar el componente */
-.oculto {
-  opacity: 0;
-  transform: translateY(-20px); /* Subir ligeramente el componente */
-  pointer-events: none; /* Desactivar eventos mientras está oculto */
-}
-
-/* Estilo para mostrar el componente */
 .visible {
-  opacity: 1;
-  transform: translateY(0); /* Posición original */
-  pointer-events: auto; /* Permitir eventos */
+  height: 187px;
+  transition: height 0.1s ease;
 }
-
+.oculto {
+  height: 40px;
+  overflow: hidden;
+  transition: height 0.1s ease;
+}
 .visible,
 .oculto {
   font-size: 18px;
@@ -36,7 +24,11 @@
   margin-left: 9px;
   border-radius: 5px;
   padding-left: 5px;
-  font-family: 'Quicksand', sans-serif;;
+  font-family: "Quicksand", sans-serif;
+}
+
+.nuevaCatContainer{
+  width: 100%;
 }
 
 .catName {
@@ -80,11 +72,30 @@
   border-radius: 7px;
 }
 
-.cerrarCatBtn{
+.cerrarCatBtn {
   background-color: red;
   color: aliceblue;
   font-weight: bold;
 }
 
-
 /*   background-color: #242424; */
+
+@media (max-width: 768px) {
+  /* Estilo base para la transición */
+  .visible {
+    height: 187px;
+    transition: height 0.1s ease;
+  }
+  .oculto {
+    height: 40px;
+    overflow: hidden;
+    transition: height 0.1s ease;
+  }
+  .catInput {
+    width: 100%;
+    margin-left: 0px;
+  }
+  .botonesNuevaCat{
+    justify-content: center;
+  }
+}

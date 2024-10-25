@@ -1,9 +1,11 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useState } from "react";
 import NuevaCategoria from "../NuevaCategoria/NuevaCategoria";
 import { TareasContext } from "../../../context/TareasContext";
 import { ColorContext } from "../../../context/ColorContext";
 import Select from "react-select";
 import { RiCloseLargeFill } from "react-icons/ri";
+import { IoIosArrowDown } from "react-icons/io";
+import { IoIosArrowForward } from "react-icons/io";
 import "./VentanaNuevaTarea.css";
 
 function VentanaNuevaTarea({ handleBtnNuevaTarea, Name }) {
@@ -17,7 +19,7 @@ function VentanaNuevaTarea({ handleBtnNuevaTarea, Name }) {
   const [ventanaCat, setVentanaCat] = useState(false);
 
   const handleBtnNuevaCat = () => {
-    setVentanaCat(true);
+    setVentanaCat(!ventanaCat);
   };
 
   const handleCerrarNuevaCat = () => {
@@ -52,9 +54,9 @@ function VentanaNuevaTarea({ handleBtnNuevaTarea, Name }) {
     setCategoria({ nombre: "", color: "#000000" });
 
     // Cerrar la ventana
-    setTimeout(() => {
-      handleBtnNuevaTarea();
-    }, 100);
+    handleBtnNuevaTarea();
+
+
   };
 
 
@@ -114,18 +116,14 @@ function VentanaNuevaTarea({ handleBtnNuevaTarea, Name }) {
             </label>
           </section>
 
-          <section className="formNuevaCat">
-            <button
-              type="button"
-              onClick={handleBtnNuevaCat}
-              className="btnCrearCat"
-            >
-              Crear Categoria
-            </button>
+          <section className={`formNuevaCat ${ventanaCat ? "visible" : "oculto"}`}>
+            <button type="button" onClick={handleBtnNuevaCat} className="btnCrearCat" > Crear Categoria {ventanaCat ? <IoIosArrowDown /> : <IoIosArrowForward />} </button>
             <NuevaCategoria
-              handleCerrarNuevaCat={handleCerrarNuevaCat}
-              className={ventanaCat ? "visible" : "oculto"}
-            />
+            handleCerrarNuevaCat={handleCerrarNuevaCat}
+/*             className={ventanaCat ? "visible" : "oculto"} */
+          />
+            
+            
           </section>
 
           <button
@@ -139,7 +137,7 @@ function VentanaNuevaTarea({ handleBtnNuevaTarea, Name }) {
             Agregar tarea
           </button>
         </form>
-        <button type="button" onClick={handleBtnNuevaTarea} className="btnCerrarVentana">
+        <button type="button" onClick={() => {handleBtnNuevaTarea();   setVentanaCat(false)}} className="btnCerrarVentana">
           <RiCloseLargeFill />
         </button>
       </div>

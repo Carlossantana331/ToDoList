@@ -17,5 +17,11 @@
     margin-top: 10px;
     cursor: pointer;
     color: aliceblue;
+    font-size: 25px;
 }
 
+@media (max-width: 768px) {
+    .btnNuevaTareaIcon{
+        width: 50%;
+    }
+}

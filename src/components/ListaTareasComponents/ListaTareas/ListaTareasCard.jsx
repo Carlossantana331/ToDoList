@@ -107,7 +107,7 @@ function ListaTareasCard() {
                     </button>
                   </div>
 
-                  <div>
+                  <div className="cardItemText">
                     <div>{tarea.tarea}</div>
                     <div>{tarea.fecha}</div>
                   </div>

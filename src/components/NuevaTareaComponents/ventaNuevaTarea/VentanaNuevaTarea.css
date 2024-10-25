@@ -23,14 +23,13 @@
 .modalContainer{
     width: 90%;
     max-width: 600px;
-    max-height: 90%;
     background-color: white;
-    margin: auto;
+    margin: 13% auto auto auto;
     border-radius: 7px;
     border: 2px solid rgba(3, 5, 167, 0.822);
     padding: 3em 2.5em;
-    display: grid;
-    place-items: center;
+    display: flex; /* Cambiado a flex */
+    flex-direction: column; /* Añadir esta línea */
     transform: var(--transform);
     transition: 0.3s ease;
     transition: var(--transition);
@@ -76,16 +75,27 @@
 }
 
 .btnCrearCat{
-    width: 100px;
-    border-radius: 7px;
+    border: none;
     background-color: transparent;
     cursor: pointer;
+    box-shadow: none;
+    margin: 5px;
+    display: flex;
+    align-items: flex-end;
+    gap: 5px;
+    font-size: 14px;
+    font-weight: 800;
+
+}
+.btnCrearCat:active{
+    box-shadow: none;
 }
 
 .formNuevaCat{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 1em;
+    align-items: flex-end;
 }
 
 
@@ -150,4 +160,29 @@
 
 .css-1nmdiq5-menu{
     font-size: 16px;
+}
+
+
+@media (max-width: 768px) {
+    .modalContainer{
+        width: 95%;
+        padding: 1.5em;
+        margin: 50% auto auto auto;
+    }
+    .formTarea{
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .label{
+        width: 100%;
+    }
+    .formNuevaCat{
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+
+    }
+
+    
 }

@@ -30,7 +30,7 @@ function NuevaCategoria({ handleCerrarNuevaCat, className }) {
   };
 
   return (
-    <div className={className}>
+    <div className="nuevaCatContainer">
       <div className="inputNuevaCat">
         <label className="catName">
           Nombre de la categoria:

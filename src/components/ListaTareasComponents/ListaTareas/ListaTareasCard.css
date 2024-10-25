@@ -150,3 +150,32 @@ h2 {
     transform: scale(1.1);
     fill: #f10404;
 }
+
+@media (max-width: 768px) {
+    .cardContainer{
+        margin: 50px 0px;
+    }
+    .card{
+        width: 85%;
+    }
+    .deleteCatBtn{
+        padding: 10px;
+        font-size: 18px;
+    }
+    .deleteTaskBtn{
+        font-size: 16px;
+    }
+    .checkBtn{
+        font-size: 16px;
+    }
+    .cardItemContent::before{
+        width: 330px;
+    }
+    .cardItemText{
+        font-weight: 900;
+        font-size: 18px;
+    }
+    h2{
+        font-size: 30px;
+    }
+}
